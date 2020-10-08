@@ -1,12 +1,8 @@
 {
   "routes": [
     {
-      "route": "/products",
-      "allowedRoles": [ "contributor" ]
-    },
-    {
-      "route": "/.auth/login/twitter",
-      "statusCode": "404"
+      "route": "/login",
+      "serve": "/.auth/login/aad"
     },
     {
       "route": "/.auth/login/google",
@@ -19,6 +15,18 @@
     {
       "route": "/.auth/login/twitter",
       "statusCode": "404"
+    },
+    {
+      "route": "/.auth/login/github",
+      "statusCode": "404"
+    },
+    {
+        "route": "/api/*",
+        "allowedRoles": ["reader"]
+    },
+    {
+      "route": "/products",
+      "allowedRoles": [ "contributor", "reader" ]
     },
     {
       "route": "/*",
