@@ -1,10 +1,6 @@
 {
   "routes": [
     {
-      "route": "/products",
-      "allowedRoles": [ "contributor" ]
-    },
-    {
       "route": "/login",
       "serve": "/.auth/login/aad"
     },
@@ -23,6 +19,10 @@
     {
       "route": "/.auth/login/github",
       "statusCode": "404"
+    },
+    {
+      "route": "/products",
+      "allowedRoles": [ "contributor", "reader" ]
     },
     {
       "route": "/*",
