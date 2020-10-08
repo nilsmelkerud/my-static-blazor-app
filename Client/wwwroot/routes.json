@@ -21,6 +21,10 @@
       "statusCode": "404"
     },
     {
+        "route": "/api/*",
+        "allowedRoles": ["reader"]
+    },
+    {
       "route": "/products",
       "allowedRoles": [ "contributor", "reader" ]
     },
