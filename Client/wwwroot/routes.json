@@ -5,6 +5,10 @@
       "allowedRoles": [ "contributor" ]
     },
     {
+      "route": "/login",
+      "serve": "/.auth/login/aad"
+    },
+    {
       "route": "/.auth/login/google",
       "statusCode": "404"
     },
